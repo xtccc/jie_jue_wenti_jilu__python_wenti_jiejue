@@ -1,0 +1,8 @@
+alias别名机制
+
+Cmder增加了alias功能： 它让你用短短的指令执行一些常见但指令超长又难以记忆的语法;
+在其控制台输入alias可以查看。
+
+1. cmd aliases：
+
+在%CMDER_ROOT%\config\user-aliases.cmd中添加cmd aliases，它仅用于 cmd 命令

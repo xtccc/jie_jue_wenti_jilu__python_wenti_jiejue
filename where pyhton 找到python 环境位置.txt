@@ -1,0 +1,1 @@
+where pyhton 找到python 环境位置
