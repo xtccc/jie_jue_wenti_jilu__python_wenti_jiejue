@@ -2,7 +2,7 @@
 修改  /usr/bin/proxychains文件下
 
         export LD_PRELOAD=libproxychains.so.3
-变成  》》
+变成:
 
         export LD_PRELOAD=/usr/lib/libproxychains.so.3
         
