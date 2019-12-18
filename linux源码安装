@@ -1,0 +1,6 @@
+1 找到.tar.gz的位置,并进入目录
+2 tar -zxvf apr-1.6.3.tar.gz
+3 cd apr-1.6.3 #进入解压缩的文件夹
+4 ./confige --prefix=/usr/local/apr
+5 make#编译 没有的安装 sudo apt install make   gcc
+6 sudo make install #安装
