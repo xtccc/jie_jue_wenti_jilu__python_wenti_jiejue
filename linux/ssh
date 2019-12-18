@@ -1,0 +1,9 @@
+1 客户端运行 ssh-keygen
+  或者直接到 ~/.ssh/id_rsa.pub 
+2客户端.pub发送到 服务器端
+3 服务器 sshd
+  客户端 ssh 服务器_id@服务器_ip
+我的手机termux_ssh:
+          % ssh -p 8022 u0_a531@192.168.0.109        #termux端口是8022 ssh默认22
+        
+
