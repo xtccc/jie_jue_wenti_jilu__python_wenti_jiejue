@@ -1,0 +1,14 @@
+
+#把本地clien_file 复制到 远程home下的remote_file
+scp -P port client_file remove_user@remote_ip:~/remote_file
+#把远程home下的remote_ile 复制到 本地的client_file
+scp -P port remote_user@remote_ip:remote_file client_file
+规律:
+        从左向右复制:
+
+#复制文件夹 用-r 递归复制
+#本地到远程
+scp -P -r  port demo  remove_user@remote_ip:demo
+#远程到本地 
+scp -P -r port remove_user@remote_ip:demo demo
+# 规律 从左到右
