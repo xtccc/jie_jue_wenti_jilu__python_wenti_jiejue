@@ -1,0 +1,3 @@
+1 确认可以使用密码登陆ssh_remote
+2 ssh-keygen        回车*3
+3 ssh-copy-id -p port remote_user@remote_ip
