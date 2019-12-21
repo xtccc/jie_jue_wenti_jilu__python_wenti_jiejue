@@ -1,0 +1,5 @@
+xargs - 从标准输入重建并执行命令行
+
+        ex: 
+            find -name '*.apk' | xargs rm
+            找到该文件夹下的.apk文件并删除

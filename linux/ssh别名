@@ -1,0 +1,7 @@
+别名保存在 ~/.ssh/config中
+
+Host termux
+  HostName 192.168.1.109
+  User u0_a531
+  Port 8022  
+
