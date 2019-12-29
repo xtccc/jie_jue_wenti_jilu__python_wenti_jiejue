@@ -1,0 +1,8 @@
+conda install <>
+conda activate <>
+conda create -n <name> python=3
+conda create -n <name> python=2.7
+conda info --envs
+souce activate <>
+
+

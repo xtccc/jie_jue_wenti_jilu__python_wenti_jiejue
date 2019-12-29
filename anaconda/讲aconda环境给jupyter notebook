@@ -1,0 +1,5 @@
+source activate 环境名称
+
+conda install ipykernel
+
+python -m ipykernel install --user --name 环境名称 --display-name "Python (环境名称)"
