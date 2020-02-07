@@ -1,0 +1,3 @@
+sudo chown -R usr ~/anaconda3
+        sudo chown -R xtcc ~/anaconda3
+

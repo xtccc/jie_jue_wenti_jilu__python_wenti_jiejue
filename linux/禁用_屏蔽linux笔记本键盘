@@ -1,0 +1,8 @@
+xinput list
+#列出列表
+找到 AT Translated set 2 keyboard 的id
+我的为 18
+设置其值:
+        xinput set-prop 18 "Device Enabled" 0
+想恢复设置其值为1:
+    xinput set-prop 18 "Device Enabled" 1

@@ -1,0 +1,13 @@
+crontab 命令
+先编辑一个文件
+xtcccron 内容：
+         0 19 * * * '/home/xtcc/桌面/自动填写疾病/疾病.py'
+crontab xtcccron
+crontab -l 查看已经设置的定时命令
+crontab -r 删除命令
+
+xtcccron 的意思是： 每天19 00 执行 疾病.py
+
+
+cat /var/log/syslog |grep "疾病" 查看是否执行命令
+# 'https://blog.csdn.net/qq_29277155/article/details/51058203'
