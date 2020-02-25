@@ -1,0 +1,55 @@
+ # 依赖
+sudo pacman -S virtualgl lib32-virtualgl lib32-primus primus
+
+# 安装双显卡切换程序bumblebee
+sudo mhwd -f -i pci video-hybrid-intel-nvidia-bumblebee(先mhwd -l 自己看看版本，加上版本号） ex ：
+                                                                                            video-hybrid-intel-nvidia-430xx-bumblebee
+
+# 允许服务
+sudo systemctl enable bumblebeed
+
+# 添加用户
+sudo gpasswd -a $USER bumblebee
+
+
+为了防止重启之后不能进入登录界面，需要做如下的配置
+
+    打开 /etc/default/grub
+    找到并且改为：GRUB_CMLINE_LINUX_DEFAULT=”quiet acpi_osi=! acpi_osi=Linux acpi_osi=’Windows 2015’ pcie_port_pm=off resume=…”
+    运行sudo update-grub，重启
+
+    
+测试显卡性能
+
+使用下面的shell命令安装显卡测试程序
+
+# 安装测试软件
+sudo pacman -S mesa-demos
+
+# 集成显卡性能
+glxgears -info
+
+# 独显性能
+optirun glxgears -info
+# 或者
+primusrun glxgears -info
+
+需要注意的是，之后运行的所有程序，如果需要使用独立显卡，需要在命令的前面加上optirun或者primusrun的前缀。
+
+
+# 打开nvida面板
+optirun -b none nvidia-settings -c :8
+
+# 不依赖Bumblebee来使用CUDA
+sudo tee /proc/acpi/bbswitch <<< 'ON'
+
+# 使用完CUDA 停止NVIDIA显卡
+sudo rmmod nvidia_uvm nvidia && sudo tee /proc/acpi/bbswitch <<< OFF
+
+inxi -G # 查看显卡情况
+watch -n 10 optirun nvidia-smi  # 查看GPU情况
+
+dota2 快捷方式修改：
+        steam vblank_mode=0 primusrun steam://rungameid/570
+        # 主要是加入了vblank_mode 和primusrun 记得把steam放最前面 暂时不支持vulkan
+        
