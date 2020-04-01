@@ -1,0 +1,2 @@
+清理孤立的包
+sudo pacman -Rns $(pacman -Qtdq)
