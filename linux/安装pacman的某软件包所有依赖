@@ -1,0 +1,14 @@
+pacman
+ --asdeps         作为非单独指定安装的软件包安装 
+#便于卸载软件包时卸载依赖
+
+
+expac
+-S, --sync
+           Search the sync databases for provided targets.
+
+%o    optional deps (no descriptions)
+
+
+sudo pacman -S --asdeps $(expac -S '%o' youtube-dl)
+#含义： 安装youtube-dl的所有依赖。
