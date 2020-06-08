@@ -1,0 +1,10 @@
+连接USB 开启USB调试
+手机关机，音量下 加 电源键 进入fastboot
+输入命令：
+    fastboot devices 
+有序列号出现
+
+fastboot flash recovery twrp-3.3.1-2-dipper.img 
+
+长按电源键，黑屏后，音量上 加 电源键 进入recovery
+
