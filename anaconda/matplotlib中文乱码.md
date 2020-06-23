@@ -34,7 +34,7 @@ matplotlib.matplotlib_fname() #将会获得matplotlib包所在文件夹
 - 将matplotlibrc文件内的font.family修改为Microsoft YaHei
 
 ``` python
-# 例如一下
+# 例如以下
 font.family         :Microsoft YaHei
 ```
 
