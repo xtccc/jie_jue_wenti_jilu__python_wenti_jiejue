@@ -1,0 +1,18 @@
+
+# /etc/fstab 挂在硬盘的配置文件
+
+
+# 查看uuid
+## blkid /dev/vdb1
+
+# /etc/fstab
+UUID=0b3040e2-1367-4abb-841d-ddb0b92693df /mnt/sdc   ext4   defaults    0 0
+
+# 验证配置是否正常
+
+umount /dev/vdb1
+
+mount -a
+
+# 更改硬盘权限，不然是root的
+sudo chown -hR xtcc:xtcc /home/xtcc/hdd_1T 
